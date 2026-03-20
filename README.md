@@ -16,9 +16,9 @@ Your App / Agent
 tracellm_api.py  ──read──►  http://localhost:8000/docs
 ```
 
-- **`tracellm.py`** — MCP server. Receives log writes from any agent or app.
-- **`tracellm_api.py`** — Read-only query API. Browse and search logs in the browser.
-- **`tracellm.db`** — Local DuckDB file. All logs stored on your machine.
+- **`mcpserver\tracellm.py`** — MCP server. Receives log writes from any agent or app.
+- **`api\tracellm_api.py`** — Read-only query API. Browse and search logs in the browser.
+- **`mcpserver\tracellm.db`** — Local DuckDB file. All logs stored on your machine.
 
 ---
 
