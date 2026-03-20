@@ -12,13 +12,13 @@ Tracellm captures every LLM interaction — prompts, responses, tool calls, erro
 Your App / Agent
       ↓  MCP (SSE · port 8001)
  tracellm.py  ──write──►  tracellm.db  (DuckDB)
-      ↓
-tracellm_api.py  ──read──►  http://localhost:8000/docs
+                                          ↓
+                                    tracellm_api.py  ──read──►  http://localhost:8000/docs
 ```
 
 - **`mcpserver\tracellm.py`** — MCP server. Receives log writes from any agent or app.
 - **`api\tracellm_api.py`** — Read-only query API. Browse and search logs in the browser.
-- **`mcpserver\tracellm.db`** — Local DuckDB file. All logs stored on your machine.
+- **`tracellm.db`** — Local DuckDB file. All logs stored on your machine.
 
 ---
 
@@ -95,9 +95,9 @@ def log_to_tracellm(session_id, agent_name, role, content, tokens=0):
 
 | File | Purpose |
 |---|---|
-| `tracellm.py` | MCP server — handles all log writes (port 8001) |
-| `tracellm_api.py` | Read-only query API — browse logs in browser (port 8000) |
-| `chat.py` | Example Streamlit chat app using Intel Foundry NPU models |
+| `mcpserver\tracellm.py` | MCP server — handles all log writes (port 8001) |
+| `api\tracellm_api.py` | Read-only query API — browse logs in browser (port 8000) |
+| `sampleclient\chat.py` | Example Streamlit chat app using Intel Foundry NPU models |
 | `tracellm.db` | Created automatically on first run |
 
 ---
