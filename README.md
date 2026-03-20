@@ -33,14 +33,14 @@ pip install mcp[cli] duckdb fastapi uvicorn starlette
 ### 2. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/tracellm.git
-cd tracellm
+git clone https://github.com/bossrulez/Tracellm.git
+cd Tracellm
 ```
 
 ### 3. Start the MCP server
 
 ```bash
-python tracellm.py
+python mcpserver/tracellm.py
 ```
 
 You should see:
@@ -53,7 +53,7 @@ Tracellm MCP server running (SSE) → http://127.0.0.1:8001/sse
 Open a second terminal:
 
 ```bash
-python tracellm_api.py
+python api/tracellm_api.py
 ```
 
 ### 5. Connect your app
